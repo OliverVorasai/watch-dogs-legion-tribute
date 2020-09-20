@@ -42,6 +42,10 @@ export default {
   @media only screen and (max-width: 1023px) {
     display: none;
   }
+  img {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .right-text {
