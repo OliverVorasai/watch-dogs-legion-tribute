@@ -27,7 +27,7 @@
       <img class="legions" :src="require('../assets/grid_shots/watchdogs_5x4.png')" />
       <img class="legions" :src="require('../assets/grid_shots/watchdogs_5x5.png')" />
     </div>
-    <img id="skull-flash" :src="require('../assets/watchdogs-legion-logo.svg')" />
+    <img id="skull-flash" :src="require('../assets/watch-dogs-legion-logo.svg')" />
   </div>
 </template>
 
