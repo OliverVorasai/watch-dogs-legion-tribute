@@ -5,7 +5,10 @@
     </div>
 
     <div class="right-text grid-container-right">
-      <h2>WELCOME TO THE RESISTANCE</h2>
+      <h2>
+        WELCOME TO THE
+        <span class="glitch-text" data-text="RESISTANCE">RESISTANCE</span>
+      </h2>
       <h3>Build a Resistance to Fight Back.</h3>
       <p>London's facing its downfall courtesy of state surveillance, private military, and organized crime. Recruit a well-rounded resistance to overthrow the wankers ruining this once-great city. The fate of London lies with you.</p>
       <div class="iframe-container">
@@ -81,6 +84,49 @@ export default {
       right: 0;
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+.glitch-text {
+  position: relative;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::after {
+  text-shadow: -1px 0 red;
+  animation: noise-anim 3s infinite linear alternate-reverse;
+}
+.glitch-text::before {
+  text-shadow: 1px 0 blue;
+  animation: noise-anim2 6s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 999px, random(100) + px, 0);
+    }
+  }
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 999px, random(100) + px, 0);
     }
   }
 }
