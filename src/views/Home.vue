@@ -5,6 +5,7 @@
     <SubheaderComponent />
     <LegionGridComponent />
     <GameInfoComponent />
+    <FooterComponent />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import HeroComponent from "../components/HeroComponent";
 import SubheaderComponent from "../components/SubheaderComponent";
 import LegionGridComponent from "../components/LegionGridComponent";
 import GameInfoComponent from "../components/GameInfoComponent";
+import FooterComponent from "../components/FooterComponent";
 
 export default {
   name: "Home",
@@ -23,6 +25,7 @@ export default {
     SubheaderComponent,
     LegionGridComponent,
     GameInfoComponent,
+    FooterComponent,
   },
 };
 </script>
