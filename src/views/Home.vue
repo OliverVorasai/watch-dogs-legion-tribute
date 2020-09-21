@@ -7,18 +7,18 @@
 </template>
 
 <script>
-import LegionGridComponent from "../components/LegionGridComponent";
 import HeroComponent from "../components/HeroComponent";
 import SubheaderComponent from "../components/SubheaderComponent";
+import LegionGridComponent from "../components/LegionGridComponent";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    LegionGridComponent,
     HeroComponent,
     SubheaderComponent,
-  }
-}
+    LegionGridComponent,
+  },
+};
 </script>
 
 <style scoped>

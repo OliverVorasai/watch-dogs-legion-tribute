@@ -1,0 +1,44 @@
+@mixin glitchy-text {
+  .glitch-text {
+    position: relative;
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+  }
+  
+  .glitch-text::after {
+    text-shadow: -1px 0 red;
+    animation: noise-anim 3s infinite linear alternate-reverse;
+  }
+  .glitch-text::before {
+    text-shadow: 1px 0 blue;
+    animation: noise-anim2 6s infinite linear alternate-reverse;
+  }
+  
+  @keyframes noise-anim {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(100) + px, 999px, random(100) + px, 0);
+      }
+    }
+  }
+  
+  @keyframes noise-anim-2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        clip: rect(random(100) + px, 999px, random(100) + px, 0);
+      }
+    }
+  }
+}
