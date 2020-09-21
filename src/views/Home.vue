@@ -3,6 +3,7 @@
     <HeroComponent />
     <SubheaderComponent />
     <LegionGridComponent />
+    <GameInfoComponent />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import HeroComponent from "../components/HeroComponent";
 import SubheaderComponent from "../components/SubheaderComponent";
 import LegionGridComponent from "../components/LegionGridComponent";
+import GameInfoComponent from "../components/GameInfoComponent";
 
 export default {
   name: "Home",
@@ -17,6 +19,7 @@ export default {
     HeroComponent,
     SubheaderComponent,
     LegionGridComponent,
+    GameInfoComponent,
   },
 };
 </script>
